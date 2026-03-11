@@ -248,7 +248,7 @@ const faqJsonLd = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen max-w-[1400px] mx-auto w-full">
+    <div className="flex flex-col min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -258,7 +258,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Nav */}
-      <nav className="flex items-center justify-between px-5 md:px-10 lg:px-20 py-4 md:py-5">
+      <nav className="flex items-center justify-between px-5 md:px-10 lg:px-20 py-4 md:py-5 max-w-[1400px] mx-auto w-full">
         <div className="flex items-center gap-2.5">
           <Logo className="h-6 md:h-7 w-auto" />
           <span className="text-base md:text-lg font-semibold tracking-tight text-foreground">
@@ -277,7 +277,7 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 pt-16 md:pt-24 lg:pt-[120px] pb-16 md:pb-20 lg:pb-[100px] gap-6 md:gap-8">
+      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 pt-16 md:pt-24 lg:pt-[120px] pb-16 md:pb-20 lg:pb-[100px] gap-6 md:gap-8 max-w-[1400px] mx-auto w-full">
         <AnimateIn>
           <div className="flex items-center px-3 md:px-4 py-1.5 rounded-full border border-gray-200 gap-2">
             <span className="text-xs md:text-sm font-medium text-blue">New</span>
@@ -317,7 +317,8 @@ export default function Home() {
       </section>
 
       {/* Problem */}
-      <section className="flex flex-col px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[100px] gap-8 md:gap-12 bg-gray-50">
+      <div className="bg-gray-50 w-full">
+      <section className="flex flex-col px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[100px] gap-8 md:gap-12 max-w-[1400px] mx-auto">
         <AnimateIn>
           <div className="flex flex-col gap-4 md:gap-5 max-w-[680px]">
             <span className="text-[13px] font-semibold text-blue uppercase tracking-[0.08em]">
@@ -366,9 +367,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </div>
 
       {/* How it works */}
-      <section id="how-it-works" className="flex flex-col items-center px-5 md:px-10 lg:px-20 pt-16 md:pt-24 lg:pt-[120px] pb-6 gap-4 md:gap-5 scroll-mt-20">
+      <section id="how-it-works" className="flex flex-col items-center px-5 md:px-10 lg:px-20 pt-16 md:pt-24 lg:pt-[120px] pb-6 gap-4 md:gap-5 scroll-mt-20 max-w-[1400px] mx-auto w-full">
         <AnimateIn>
           <span className="text-[13px] font-semibold text-blue uppercase tracking-[0.08em]">
             How it works
@@ -387,7 +389,7 @@ export default function Home() {
         </AnimateIn>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-5 md:px-10 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-20 lg:pb-[120px]">
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 px-5 md:px-10 lg:px-20 pt-8 md:pt-12 pb-16 md:pb-20 lg:pb-[120px] max-w-[1400px] mx-auto w-full">
         {steps.map((step, i) => (
           <AnimateIn key={step.number} delay={i * 100}>
             <div className="flex flex-col gap-4 p-6 md:p-10 border border-gray-200 rounded-2xl h-full">
@@ -408,7 +410,8 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="flex flex-col px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[100px] gap-10 md:gap-16 bg-gray-50">
+      <div className="bg-gray-50 w-full">
+      <section className="flex flex-col px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[100px] gap-10 md:gap-16 max-w-[1400px] mx-auto">
         <AnimateIn>
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 md:gap-8">
             <div className="flex flex-col gap-4 md:gap-5 max-w-[520px]">
@@ -441,9 +444,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+      </div>
 
       {/* Pricing */}
-      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[120px] gap-10 md:gap-14">
+      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[120px] gap-10 md:gap-14 max-w-[1400px] mx-auto w-full">
         <AnimateIn>
           <div className="flex flex-col items-center gap-4 md:gap-5">
             <span className="text-[13px] font-semibold text-blue uppercase tracking-[0.08em]">
@@ -528,7 +532,8 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[120px] gap-6 md:gap-8 bg-foreground">
+      <div className="bg-foreground w-full">
+      <section className="flex flex-col items-center px-5 md:px-10 lg:px-20 py-16 md:py-20 lg:py-[120px] gap-6 md:gap-8 max-w-[1400px] mx-auto">
         <AnimateIn>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[38px] md:leading-[48px] lg:leading-[56px] tracking-[-0.03em] text-center max-w-[600px]">
             Ready to build the right thing?
@@ -555,9 +560,10 @@ export default function Home() {
           </div>
         </AnimateIn>
       </section>
+      </div>
 
       {/* Footer */}
-      <footer className="flex flex-col sm:flex-row items-center justify-between gap-4 px-5 md:px-10 lg:px-20 py-6 md:py-8 border-t border-gray-200">
+      <footer className="flex flex-col sm:flex-row items-center justify-between gap-4 px-5 md:px-10 lg:px-20 py-6 md:py-8 border-t border-gray-200 max-w-[1400px] mx-auto w-full">
         <div className="flex items-center gap-2.5">
           <Logo className="h-5 w-auto" />
           <span className="text-sm font-medium text-foreground">calibrato</span>
