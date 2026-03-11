@@ -9,6 +9,7 @@ const geist = Geist({
 });
 
 const siteUrl = "https://calibrato.app";
+const assetUrl = "https://calibrato-website.vercel.app";
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
       "Turn customer feedback, company signals, and team input into a clear, data driven roadmap. No gut feelings required.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${assetUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Calibrato — Prioritize what matters. Ship what counts.",
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
     title: "Calibrato — Prioritize what matters. Ship what counts.",
     description:
       "Turn customer feedback, company signals, and team input into a clear, data driven roadmap. No gut feelings required.",
-    images: ["/og-image.jpg"],
+    images: [`${assetUrl}/og-image.jpg`],
   },
   robots: {
     index: true,
