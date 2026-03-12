@@ -190,6 +190,39 @@ const features = [
       </svg>
     ),
   },
+  {
+    title: "Departments",
+    description:
+      "Organize ideas by team or business unit. Assign each idea to a department and filter across boards, roadmaps, and reports to see what each team owns.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="13" y="3" width="8" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="13" y="10" width="8" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <rect x="3" y="14" width="8" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Real-Time Collaboration",
+    description:
+      "See changes from your teammates the moment they happen. Ideas, votes, and status updates sync instantly across every open browser, no refresh needed.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Reporting & Budgets",
+    description:
+      "Track progress by status, objective, department, or period. View budget allocation across your roadmap and drill into an ideas table with sorting and grouping.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ];
 
 const steps = [
@@ -227,7 +260,9 @@ const included = [
   "In-app & email notifications",
   "Tasks, comments & file attachments",
   "Company tracking with CSV import",
-  "Role-based permissions",
+  "Departments & role-based permissions",
+  "Real-time collaboration",
+  "Reporting & budget tracking",
 ];
 
 const jsonLd = {
