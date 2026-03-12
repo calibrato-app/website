@@ -54,7 +54,7 @@ const features = [
   {
     title: "Ideas & Status Board",
     description:
-      "Full lifecycle from NEW to DELIVERED with internal voting and comments.",
+      "Track ideas from NEW through UNDER_REVIEW, PLANNED, IN_PROGRESS to DONE. View as list, kanban, or timeline. Internal voting, file attachments, and threaded comments on every idea.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
@@ -67,7 +67,7 @@ const features = [
   {
     title: "RICE Scoring",
     description:
-      "Auto computed priority scores driven by real customer and company signals.",
+      "Three of four RICE dimensions are auto-computed. Reach from ARR-weighted company tiers, Impact from strategic objectives, and Confidence from votes and feedback signals. You only set Effort.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path
@@ -82,7 +82,7 @@ const features = [
   {
     title: "Company & Tier Tracking",
     description:
-      "Link ideas to customers by ARR tier. Reach updates automatically.",
+      "Register customers with ARR tiers and weighted scoring. Incoming feedback auto-links to companies by email domain. Bulk import via CSV. Reach updates in real time.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -95,7 +95,7 @@ const features = [
   {
     title: "Strategic Objectives",
     description:
-      "Connect ideas to goals with per link impact scores. Impact updates automatically.",
+      "Define your product goals and link ideas with LOW, MEDIUM, or HIGH impact levels. Impact score auto-updates as links change. RICE scores recalculate automatically.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
@@ -106,7 +106,7 @@ const features = [
   {
     title: "Public Roadmap",
     description:
-      "Customer facing board with configurable visibility and external voting.",
+      "Share a customer-facing roadmap with configurable visible statuses. Enable public voting, a feedback submission form, and follower notifications. No login required for voters.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M1 12S5 4 12 4s11 8 11 8-4 8-11 8S1 12 1 12z" stroke="currentColor" strokeWidth="1.5" />
@@ -117,7 +117,7 @@ const features = [
   {
     title: "Feedback Inbox",
     description:
-      "Collect, triage, and convert customer feedback into actionable ideas.",
+      "Collect feedback from customers via a public form or internal submissions. Triage, link to existing ideas, and convert into actionable work. Feedback count feeds Confidence scoring.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" strokeWidth="1.5" />
@@ -128,7 +128,7 @@ const features = [
   {
     title: "Roadmap Planning",
     description:
-      "Monthly and quarterly views. Assign ideas to periods and plan with confidence.",
+      "Plan in monthly or quarterly periods with a timeline view. Choose RICE auto-scoring, MoSCoW categories, or fully custom drag-and-drop prioritization.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
@@ -148,13 +148,45 @@ const features = [
     ),
   },
   {
-    title: "Updates & Followers",
+    title: "Notifications",
     description:
-      "Notify internal members and public voters when status changes.",
+      "In-app notification center and email alerts for comments, @mentions, status changes, assignments, and more. Per-type, per-channel preferences for every team member.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M13.73 21a2 2 0 01-3.46 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Tasks & Assignments",
+    description:
+      "Break ideas into actionable tasks with assignees and due dates. A personal My Tasks view shows every open task assigned to you, sorted by deadline.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M9 11l3 3L22 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Comments & Reactions",
+    description:
+      "Threaded discussions on every idea with @mentions and emoji reactions. Mentioned teammates get notified instantly via email and in-app.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Tags & Permissions",
+    description:
+      "Organize ideas with colored tags and filter by theme. Four role levels from Viewer to Owner give you fine-grained control over who can do what.",
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="7" cy="7" r="1" fill="currentColor" />
       </svg>
     ),
   },
@@ -191,9 +223,11 @@ const included = [
   "Unlimited ideas, feedback & changelog",
   "Unlimited team members",
   "Public roadmap & feedback form",
-  "RICE scoring with auto signals",
-  "Email notifications & subscriptions",
-  "Full roadmap planning",
+  "RICE, MoSCoW & custom prioritization",
+  "In-app & email notifications",
+  "Tasks, comments & file attachments",
+  "Company tracking with CSV import",
+  "Role-based permissions",
 ];
 
 const jsonLd = {
