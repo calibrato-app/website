@@ -5,12 +5,16 @@
   --color-foreground: #0a0a0b;
   --color-blue: #0038ff;
   --color-blue-light: #eef1ff;
+  --color-blue-50: #f0f4ff;
   --color-gray-50: #f7f8fa;
+  --color-gray-100: #f3f4f6;
   --color-gray-400: #9ca3af;
   --color-gray-500: #6b7280;
   --color-gray-600: #4b5563;
   --color-gray-200: #e5e7eb;
   --color-gray-300: #d1d5db;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
   --font-sans: var(--font-geist);
 }
 
@@ -34,4 +38,135 @@ html {
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+}
+
+/* Hero gradient mesh */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 56, 255, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 50%, rgba(0, 56, 255, 0.06), transparent),
+    radial-gradient(ellipse 60% 40% at 20% 50%, rgba(99, 102, 241, 0.05), transparent);
+}
+
+/* Screenshot showcase */
+.screenshot-frame {
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 12px 24px rgba(0, 0, 0, 0.06),
+    0 32px 64px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.screenshot-frame:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.08),
+    0 48px 80px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero screenshot with perspective */
+.hero-screenshot {
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.03),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 24px 48px rgba(0, 0, 0, 0.08),
+    0 48px 96px rgba(0, 0, 0, 0.06);
+}
+
+/* Sticky nav with glass */
+.nav-glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Feature card hover */
+.feature-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #0038ff 0%, #4f6bff 50%, #0038ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated gradient border */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #0038ff, #6366f1, #0038ff);
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Section divider gradient */
+.section-gradient {
+  background: linear-gradient(180deg, #f7f8fa 0%, #ffffff 100%);
+}
+
+/* Dark section gradient */
+.dark-gradient {
+  background: linear-gradient(180deg, #0a0a0b 0%, #111827 50%, #0a0a0b 100%);
+}
+
+/* Floating animation for badges */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Step number glow */
+.step-glow {
+  box-shadow: 0 0 0 6px rgba(0, 56, 255, 0.08), 0 0 0 12px rgba(0, 56, 255, 0.04);
+}
+
+/* Counter animation (for stats) */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Subtle grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 56, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 56, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Pricing card highlight */
+.pricing-highlight {
+  position: relative;
+}
+
+.pricing-highlight::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0038ff, #6366f1, #0038ff);
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+  z-index: -1;
 }
