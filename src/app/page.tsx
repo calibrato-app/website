@@ -1,5 +1,10 @@
 import { AnimateIn } from "./animate-in";
 
+const ASSET_PREFIX =
+  process.env.NODE_ENV === "production"
+    ? "https://calibrato-website.vercel.app"
+    : "";
+
 function Logo({ className }: { className?: string }) {
   return (
     <svg
@@ -397,7 +402,7 @@ export default function Home() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white z-10 pointer-events-none" />
               <img
-                src="/screenshots/image-1.jpg"
+                src={`${ASSET_PREFIX}/screenshots/image-1.jpg`}
                 alt="Calibrato dashboard overview with project stats, tasks, and roadmap"
                 className="hero-screenshot w-full"
                 loading="eager"
@@ -524,7 +529,7 @@ export default function Home() {
                 {/* Screenshot side */}
                 <AnimateIn delay={200} className="lg:flex-1 w-full">
                   <img
-                    src={showcase.image}
+                    src={`${ASSET_PREFIX}${showcase.image}`}
                     alt={showcase.alt}
                     className="screenshot-frame w-full"
                     loading="lazy"
@@ -628,7 +633,7 @@ export default function Home() {
             <AnimateIn delay={0}>
               <div className="flex flex-col gap-4">
                 <img
-                  src="/screenshots/image-7.jpg"
+                  src={`${ASSET_PREFIX}/screenshots/image-7.jpg`}
                   alt="Companies tracking with ARR tiers and weighted scoring"
                   className="screenshot-frame w-full"
                   loading="lazy"
@@ -642,7 +647,7 @@ export default function Home() {
             <AnimateIn delay={100}>
               <div className="flex flex-col gap-4">
                 <img
-                  src="/screenshots/image-9.jpg"
+                  src={`${ASSET_PREFIX}/screenshots/image-9.jpg`}
                   alt="Reporting projects table grouped by department"
                   className="screenshot-frame w-full"
                   loading="lazy"
@@ -656,7 +661,7 @@ export default function Home() {
             <AnimateIn delay={200}>
               <div className="flex flex-col gap-4">
                 <img
-                  src="/screenshots/image-5.jpg"
+                  src={`${ASSET_PREFIX}/screenshots/image-5.jpg`}
                   alt="Bug tracking kanban board with severity levels"
                   className="screenshot-frame w-full"
                   loading="lazy"
@@ -670,7 +675,7 @@ export default function Home() {
             <AnimateIn delay={300}>
               <div className="flex flex-col gap-4">
                 <img
-                  src="/screenshots/image-10.jpg"
+                  src={`${ASSET_PREFIX}/screenshots/image-10.jpg`}
                   alt="Notes editor with rich text, linked projects, and participants"
                   className="screenshot-frame w-full"
                   loading="lazy"
